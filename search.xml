@@ -490,6 +490,10 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 <p>暴力法时间长是因为大量重复的比较，而这是是可以避免的。</p>
 <p>而 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mi>M</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">KMP</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> 算法的精髓在于，对于每次失配之后，我都不会从头重新开始枚举，而是根据我已经得知的主串信息，从某个特定的位置开始匹配。</p>
 <p>而对于模式串的每一位，都有一个位置，在失配之后可以帮助我们利用已有的数据不用从头匹配，从而节约时间。</p>
+<p>用白话来说，对于模式串的每个前缀而言，用数组记录到它为止的<strong>模式串前缀的真前缀和真后缀最大相同的位置</strong>。</p>
+<div class="note note-warning">
+            <p>前后缀不包括模式串本身,即<strong>只考虑真前缀和真后缀</strong>。</p>
+          </div>
 ]]></content>
       <categories>
         <category>算法学习笔记</category>
